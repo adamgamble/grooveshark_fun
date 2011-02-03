@@ -1,0 +1,10 @@
+%table
+  %tr
+    %th Artist
+    %th Name
+    %th Play
+  -@songs.each do |song|
+    %tr
+      %td= song["artist"]
+      %td= song["name"]
+      %td{:id => song["song_id"]}= link_to "Play", {:action => :play, :id => song["song_id"]}, :remote => true
