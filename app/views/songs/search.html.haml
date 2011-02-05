@@ -1,0 +1,5 @@
+%div{"data-role" => "header"}
+  %h1= "Search Results for #{params['search_string']}"
+%ul{"data-role" => "listview"}
+  -@songs.each do |song|
+    %li= link_to "#{song.artist} - #{song.name}",{:action => :play, :id => song.id}

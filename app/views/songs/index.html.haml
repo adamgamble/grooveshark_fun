@@ -1,5 +1,7 @@
-- form_tag url_for(:controller => :songs, :action => :search), :remote => true do
-  =text_field_tag :search_string
-  =submit_tag :search
-
-#search-results
+%div{"data-role" => "header"}
+  %h1 Search
+%div{"data-role" => "content"}
+  %div{"data-role" => "fieldcontain"}
+    - form_tag url_for(:controller => :songs, :action => :search) do
+      %input{:type => "search", :name => "search_string"}
+  #search-results

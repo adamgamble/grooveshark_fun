@@ -4,6 +4,7 @@ gem 'rails', '3.0.3'
 gem 'grooveshark'
 gem 'haml'
 gem 'ruby-debug19'
+gem 'jquery-rails', '>= 0.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
