@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  song_id: 1
+  small_url: MyString
+  medium_url: MyString
+  large_url: MyString
+  artist: MyString
+  album: MyString
+
+two:
+  song_id: 1
+  small_url: MyString
+  medium_url: MyString
+  large_url: MyString
+  artist: MyString
+  album: MyString

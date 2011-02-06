@@ -5,6 +5,8 @@ gem 'grooveshark'
 gem 'haml'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'heroku'
+gem 'xml-simple'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
