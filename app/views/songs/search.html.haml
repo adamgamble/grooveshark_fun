@@ -1,5 +1,8 @@
 %div{"data-role" => "header"}
   %h1= "Search Results for #{params['search_string']}"
-%ul{"data-role" => "listview"}
-  -@songs.each do |song|
-    %li= link_to "#{song.artist} - #{song.name}",{:action => :play, :id => song.id}
+-@artists.each_pair do |artist, songs|
+  %div{"data-role" => "collapsible", "data-collapsed" => "true"}
+    %h3= artist
+    %ul{"data-role" => "listview"}
+      -songs.each do |song|
+        %li= link_to song.name,{:action => :play, :id => song.id}

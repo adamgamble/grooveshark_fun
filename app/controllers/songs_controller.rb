@@ -1,5 +1,4 @@
 load 'lib/tmp_song.rb'
-load 'lib/album_art.rb'
 
 class SongsController < ApplicationController
   before_filter :load_grooveshark_client
@@ -11,7 +10,12 @@ class SongsController < ApplicationController
   def index
   end
   def search
+    @artists = {}
     @songs = @client.search_songs(params["search_string"])
+    @songs.each do |song|
+      @artists[song.artist] = [] unless @artists[song.artist].is_a?(Array)
+      @artists[song.artist] << song
+    end
   end
 
   def play
