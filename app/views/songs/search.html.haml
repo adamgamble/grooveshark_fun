@@ -5,4 +5,5 @@
     %h3= artist
     %ul{"data-role" => "listview"}
       -songs.each do |song|
-        %li= link_to song.name,{:action => :play, :id => song.id}
+        %li
+          %a{:href=>"/songs/#{song.id}/play?song_artist=#{CGI.escape(song.artist)}&song_album=#{CGI.escape(song.album)}&song_name=#{CGI.escape(song.name)}"}=song.name

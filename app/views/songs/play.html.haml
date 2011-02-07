@@ -1,3 +1,12 @@
+:javascript
+  function play_audio(audio_src) {
+  var audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', audio_src);
+  audioElement.play()
+  }
+
 %div{"data-role" => "header"}
-  %h1= "Playing Song"
-%audio{:src => @song_url, :controls => "controls"}
+  %h1= "#{params['song_artist']} - #{params['song_name']}"
+=image_tag AlbumArtwork.fetch_cover(params["song_artist"],params["song_album"]).medium_url rescue nil
+%div{"data-role" => "footer"}
+  %a{:href => "#", :onclick=>"play_audio(#{@song_url})} Play
